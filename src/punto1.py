@@ -81,5 +81,9 @@ class Punto1:
             i = desplazamiento + 1
             print("El descifrado para un desplazamiento de " + str(i) + " es: " + textoCifrado + "\n")
 
-p = Punto1()
-pp = p.descifrarFuerza("KROD XQDO")
+
+# Nota: Para que los 2 primeros métodos hagan su tarea con otras pruebas, agregarlas en tests\punto1.json como están las demás en el mismo archivo 
+# p = Punto1()
+# pp = p.cifrarTexto() #Prueba de cifrarTexto
+# pp = p.descifrarTexto() #Prueba de descifrarTexto
+# pp = p.descifrarFuerza("KROD XQDO") #Prueba de descifrarFuerza cambiar texto entre comillas para probar distintos con distintos textos cifrados
