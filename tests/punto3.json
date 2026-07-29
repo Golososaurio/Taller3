@@ -1,8 +1,24 @@
 {
     "Pruebas": [
         {
-            "Nombre": "Caja Tornillos 3mm",
-            "Precio": 5000
+            "Notas": [40, 35, 50, 25],
+            "M": 1000003,
+            "Esperado": 37.5
+        },
+        {
+            "Notas": [50, 20, 35],
+            "M": 1001003,
+            "Esperado": 35
+        },
+        {
+            "Notas": [45, 20, 35],
+            "M": 1900003,
+            "Esperado": 33.3
+        },
+        {
+            "Notas": [22, 15, 20, 34, 50, 42],
+            "M": 1040003,
+            "Esperado": 30.5
         }
     ]
 }
