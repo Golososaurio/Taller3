@@ -1,0 +1,40 @@
+{
+    "Pruebas": [
+        {
+            "Codigo": "HOLA UNAL",
+            "Esperado": "KROD XQDO",
+            "Cifrado": 1,
+            "Desplazamiento": 3
+        },
+        {
+            "Codigo": "KROD XQDO",
+            "Esperado": "HOLA UNAL",
+            "Cifrado": 0,
+            "Desplazamiento": 3
+        },
+        {
+            "Codigo": "Daniel Pulido",
+            "Esperado": "Nkxsov Zevsny",
+            "Cifrado": 1,
+            "Desplazamiento": 10
+        },
+        {
+            "Codigo": "Nkxsov Zevsny",
+            "Esperado": "Daniel Pulido",
+            "Cifrado": 0,
+            "Desplazamiento": 10
+        },
+        {
+            "Codigo": "ZaPAtoz AmArillOs",
+            "Esperado": "EfUFyte FrFwnqqTx",
+            "Cifrado": 1,
+            "Desplazamiento": 5
+        },
+        {
+            "Codigo": "EfUFyte FrFwnqqTx",
+            "Esperado": "ZaPAtoz AmArillOs",
+            "Cifrado": 0,
+            "Desplazamiento": 5
+        }
+    ]
+}
