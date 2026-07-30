@@ -1,8 +1,13 @@
 {
     "Pruebas": [
         {
-            "Nombre": "Caja Tornillos 3mm",
-            "Precio": 5000
+            "Entradas": [true, false, false, true]
+        },
+        {
+            "Entradas": [true, true, true, false]
+        },
+        {
+            "Entradas": [false, true, true, false]
         }
     ]
 }
