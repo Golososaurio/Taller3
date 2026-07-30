@@ -2,6 +2,7 @@ from cargaArchivos import cargaArchivos
 
 class Punto1:
     def __init__(self):
+        '''Inicialización de los atributos importantes del programa'''
         archivo = cargaArchivos()
         self.pruebas = archivo.cargarArchivos("punto1.json")
         self.mayusculas = (65, 90)
@@ -10,6 +11,10 @@ class Punto1:
         self.minMinusculas, self.maxMinusculas = self.minusculas
 
     def cifrarTexto(self):
+        '''Se encarga de traer cada prueba desde la carpeta tests, toma el código revisa cuales de los caracteres
+        es una letra, si es una letra la pasa por el desplazamiento establecido como es cifrado se encarga de sumar
+        dicho desplazamiento y luego revisa que no se salga de los límites de los caracteres en ASCII, también 
+        pregunta si se conoce el texto esperado para saber si hace la comprobación dentro del archivo punto1.json'''
         for prueba in self.pruebas:
             textoCifrado = ""
             if prueba["Cifrado"] == 1:
@@ -37,6 +42,10 @@ class Punto1:
                         print("Esa no es una opción válida")
 
     def descifrarTexto(self):
+        '''Se encarga de traer cada prueba desde la carpeta tests, toma el código revisa cuales de los caracteres
+        es una letra, si es una letra la pasa por el desplazamiento establecido como es descifrado se encarga de
+        restar dicho desplazamiento y luego revisa que no se salga de los límites de los caracteres en ASCII,
+        también pregunta si se conoce el texto esperado para saber si hace la comprobación dentro del archivo punto1.json'''
         for prueba in self.pruebas:
             textoCifrado = ""
             if prueba["Cifrado"] == 0:
@@ -64,6 +73,8 @@ class Punto1:
                         print("Esa no es una opción válida")
 
     def descifrarFuerza(self, texto):
+        '''Toma el texto que se le envie y hace todos los descifrados posibles en el alfabeto ingles e imprime dichos
+        descifrados para que el usuario vea cuál entre todos ellos puede ser el texto que está buscando'''
         print("Estos son los posibles descifrados: \n")
         for desplazamiento in range(26):
             textoCifrado = ""
@@ -79,7 +90,7 @@ class Punto1:
                 else:
                     textoCifrado += caracter
             i = desplazamiento + 1
-            print("El descifrado para un desplazamiento de " + str(i) + " es: " + textoCifrado + "\n")
+            print("El descifrado para un desplazamiento de " + str(i) + " es: " + textoCifrado)
 
 
 # Nota: Para que los 2 primeros métodos hagan su tarea con otras pruebas, agregarlas en tests\punto1.json como están las demás en el mismo archivo 

@@ -2,10 +2,13 @@ from cargaArchivos import cargaArchivos
 
 class Punto2:
     def __init__(self):
+        '''Inicialización de los atributos importantes del programa'''
         archivo = cargaArchivos()
         self.pruebas = archivo.cargarArchivos("punto2.json")
 
     def descifrar(self):
+        '''Toma cada prueba de la carpeta tests, luego se encarga de declarar las varibles
+        y así llamar las demás funciones para realizar el descifrado'''
         for prueba in self.pruebas:
             p = prueba["P"]
             q = prueba["Q"]
@@ -30,6 +33,7 @@ class Punto2:
 
 
     def comprobarExponente(self, phi, e):
+        '''Comprueba que el exponente público sea válido (Tenga inverso modular)'''
         a = phi
         b = e
         while b != 0:
@@ -40,6 +44,7 @@ class Punto2:
             return False
 
     def euclidesExtendido(self, a, b, c):
+        '''Nos da el inverso modular de a**b'''
         a = a ** b
         for x in range(1, c):
             if (x * a) % c == 1:
