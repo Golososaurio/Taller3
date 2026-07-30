@@ -3,10 +3,14 @@ import heapq
 
 class Punto5:
     def __init__(self):
+        '''Inicialización de los atributos importantes del programa'''
         archivo = cargaArchivos()
         self.pruebas = archivo.cargarArchivos("punto5.json")
 
     def cierre(self):
+        '''Toma cada caso de pruebas, carga las variables y diccionario importantes para luego
+        pedir que el usuario cierre (quite) uno de los nodos, así guarda el estado de las variables
+        antes del cierre y vuelve a realizar los cálculos para luego del cierre'''
         for i, prueba in enumerate(self.pruebas):
             print("Para el grafo " + str(i + 1) + ": ")
             antesCierre = {}
@@ -67,7 +71,9 @@ class Punto5:
 
                 print(f"{origen:<10}{destino:<10}{antesDist:<10}{despuesDist:<12}{str(diferencia):<14}{rutaAnt:<14}{rutaDes:<14}{estado}")
 
-    def camino(self, grafo, inicio, final):     
+    def camino(self, grafo, inicio, final):
+            '''Se encarga de hacer el algoritmo Dijkstra y devolver la distancia (peso total) desde el nodo inicial
+            al nodo final junto con la ruta que se toma de inicio a fin'''
             distancias = {}
             predecesores = {}
             for nodo in grafo:
@@ -106,5 +112,5 @@ class Punto5:
                 return distancias[final], camino
 
 # Mismas instrucciones del punto 4, solo es seguir la estructura del tests\punto5.json
-p = Punto5()
-pp = p.cierre() #Prueba individual para el punto 4
+# p = Punto5()
+# pp = p.cierre() #Prueba individual para el punto 5

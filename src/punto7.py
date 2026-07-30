@@ -2,10 +2,13 @@ from cargaArchivos import cargaArchivos
 
 class Punto7:
     def __init__(self):
+        '''Inicialización de los atributos importantes del programa'''
         archivo = cargaArchivos()
         self.pruebas = archivo.cargarArchivos("punto7.json")
 
     def tablaVerdad(self):
+        '''Pregunta si se quieren usar las entradas del archivo de prueba para evaluarlas con las expresiones,
+        caso contrario crea la tabla de verdad completa según la expresión'''
         decision = ""
         while True:
             print("Desea realizar las entradas con los tests? S/N")
@@ -53,12 +56,15 @@ class Punto7:
 
 
     def primeraExpresion(self, a, b, c, d):
+        '''Primera expresión dada en el taller'''
         return (a and b) or (not c)
 
     def segundaExpresion(self, a, b, c, d):
+        '''Segunda expresión dada en el taller'''
         return (a != b) and c
 
     def terceraExpresion(self, a, b, c, d):
+        '''Tercera expresión dada en el taller'''
         return (a or b) and ((not a) or c)
 
 # p = Punto7() #Para iniciar individualmente el Punto 7
